@@ -48,16 +48,41 @@ que es un valor extremo ???
 
 
  metodos datos a tipicos ..
- Zscore -- > en el rango u +_ sigma tendemos el 68% de los datos 
-        -- > en el rango u +_ 2 sigma tendemos el 95% de los datos 
-        -- > en el rango u +_ 3 sigma tendemos el 99.7% de los datos 
+ Zscore -- > en el rango u +- sigma tendemos el 68% de los datos 
+        -- > en el rango u +- 2 sigma tendemos el 95% de los datos 
+        -- > en el rango u +- 3 sigma tendemos el 99.7% de los datos 
 
 
 que pasa si los datos no distrbuyen normal ?? , los rangos interquarttiles permiten calcular los outliers en aquellos casos donde la distribucion no es normal ....
 
 Q1 - >  25% ok , los datos estan por debajo de este valor 
-Q2 - > 
+
 
 
  
  
+Metodos  manejo valores extremos 
+- Eliminar valores extremos 
+- transforma los datos 
+- analiza por separado 
+- asigna limites  (capping)
+- metodo de eliminacion (trimming)
+- metodo de recorte ( capping )
+- probar con y sin valores extremos 
+
+
+Metodos muktivariadfos 
+- distacia de mahalanobis
+- analisis de componentes principales PCA
+- regresion robusta mahalanobis 
+- local outlier factor 
+
+visualizacion
+- grafico de dispersion en 2D o 3D 
+- Biplot del PCA 
+- Grafico de mahalanovis
+- Grafico de caras
+
+
+
+Mahalanobis ers ua medida que nos ayuda a identificar valores extems y multibariados , considera varias dvarianles al mismo tiempos para medir
