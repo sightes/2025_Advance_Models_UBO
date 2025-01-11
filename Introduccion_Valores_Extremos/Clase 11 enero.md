@@ -27,3 +27,37 @@ que es un valor extremo ???
 
 -- es un valor outlier, se encuentra significativamente alejado el rango tanto superior como inferior , ubicadad en las colas de la distribucion y representaa eventos raros o poco probables ....
  
+
+
+
+ que da origen a los outliers ??
+ -- errores en los datoas
+ -- variabilidad natural 
+ -- Fenomenos inusuales
+ -- datos faltantes  
+
+
+
+
+ consecuencias de los outliers 
+
+ sesgo en las medidas estadisticas d
+ impacto de los modelos predictivops 
+ etc ( falta info )}
+
+
+
+ metodos datos a tipicos ..
+ Zscore -- > en el rango u +_ sigma tendemos el 68% de los datos 
+        -- > en el rango u +_ 2 sigma tendemos el 95% de los datos 
+        -- > en el rango u +_ 3 sigma tendemos el 99.7% de los datos 
+
+
+que pasa si los datos no distrbuyen normal ?? , los rangos interquarttiles permiten calcular los outliers en aquellos casos donde la distribucion no es normal ....
+
+Q1 - >  25% ok , los datos estan por debajo de este valor 
+Q2 - > 
+
+
+ 
+ 
