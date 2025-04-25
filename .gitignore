@@ -10,3 +10,7 @@ Tarea_electivo_profundizacion_1/data/data.xlsx
 .DS_Store
 .DS_Store
 .DS_Store
+*.R
+.DS_Store
+Tarea_electivo_profundizacion_1/renv/settings.json
+Tarea_electivo_profundizacion_1/renv/activate.R
