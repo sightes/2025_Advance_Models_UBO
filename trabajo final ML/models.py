@@ -96,7 +96,7 @@ def fit_predict_eval_hw(training_set, test_set, model_params=None):
         seasonal_periods=model_params['seasonal_periods'],
         trend=model_params['trend'],
         seasonal=model_params['seasonal'],
-        use_boxcox=model_params['use_boxcox']
+        use_boxcox=model_params.get('use_boxcox',False)
     )
 
     ets = model.fit()
@@ -290,8 +290,11 @@ def fit_predict_eval_lstm(training_set, test_set, model_params=None):
     X_seq, y_seq = create_sequences(X_train, y_train, p['window_size'])
 
     model = Sequential([
-        LSTM(p['units'], activation='tanh', input_shape=(p['window_size'], X_seq.shape[2])),
-        Dense(1)
+       LSTM(p['units'], return_sequences=True, input_shape=(p['window_size'], X_seq.shape[2])),
+       Dropout(0.2),
+       LSTM(p['units'] // 2),
+       Dropout(0.2),
+       Dense(1)
     ])
     model.compile(optimizer=Adam(learning_rate=p['learning_rate']), loss='mse')
     model.fit(X_seq, y_seq, epochs=p['epochs'], batch_size=p['batch_size'], verbose=0)
@@ -336,7 +339,10 @@ def fit_predict_eval_gru(training_set, test_set, model_params=None):
     X_seq, y_seq = create_sequences(X_train, y_train, p['window_size'])
 
     model = Sequential([
-        GRU(p['units'], activation='tanh', input_shape=(p['window_size'], X_seq.shape[2])),
+       GRU(p['units'], return_sequences=True, input_shape=(p['window_size'], X_seq.shape[2])),
+        Dropout(0.2),
+        GRU(p['units'] // 2),
+        Dropout(0.2),
         Dense(1)
     ])
     model.compile(optimizer=Adam(learning_rate=p['learning_rate']), loss='mse')
