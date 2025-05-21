@@ -14,3 +14,11 @@ Tarea_electivo_profundizacion_1/data/data.xlsx
 .DS_Store
 Tarea_electivo_profundizacion_1/renv/settings.json
 Tarea_electivo_profundizacion_1/renv/activate.R
+/trabajo final ML/otros/lag-llama
+.DS_Store
+/.vscode
+*.csv
+*.pkl
+/trabajo final ML/otros
+*.xlsx
+*.rtf
