@@ -22,3 +22,9 @@ Tarea_electivo_profundizacion_1/renv/activate.R
 /trabajo final ML/otros
 *.xlsx
 *.rtf
+*.pyc
+*.gguf
+*.json
+*.zip
+*.webp
+*.ckpt
